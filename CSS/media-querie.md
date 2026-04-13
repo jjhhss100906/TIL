@@ -39,9 +39,49 @@
 
 ## and|only|not
 
-더욱 복잡한 조건을 명시하기 위한 연산자 키워드
+더욱 복잡한 조건을 명시하기 위한 연산자 키워드   
 
+* and:미디어 쿼리 조건을 추가한다.
+* only:미디어 쿼리가 호환되는 브라우저에만 인식 가능하게 한다.
+* not:not 뒤에 지정하는 미디어 유형은 제외한다.
 
+## 미디어 쿼리 속성
 
+* width:화면의 너비
+* height:화면의 높이
+* device-width:매체 화면의 너비
+* device-height:매체 화면의 높이
+* devie-aspect-ratio:매체 화면의 비율
+* orientation:매체 화면의 방향(min,max 사용불가)
+* color:매체의 색상 비트 수
+* color-index:매체에서 표현가능한 색상의 개수
+* monochrome:흑백 매체에서의  픽셀당 비트 수
+* resolution:매체의 해상도
 
+## 너비와 높이
+
+* width 및 height미디어 기능은 **범위 지정**에 사용될 수 없다.
+* min- 또는 max- 접두사를 붙이게 되면 최소값과 최대값을 표시할수 있다.
+```
+@media (orientation: landscape) {
+    body {
+        color: blue;
+    }
+}
+```
+이렇게 하면 화면 영역의 크기가 400픽셀보다 좁은 경우에는 색깔을 파란색으로 하라는 말이 된다.
+
+## 방향성
+
+* orientaion로 세로 모드인지 가로 모드인지 검사가 가능하다.
+```
+@media (orientation: landscape) {
+    body {
+        color: blue;
+    }
+}
+```
+이렇게 하면 가로 모드일때 색깔을 파란색으로 하라는 말이 된다.
+* landscape: 가로 화면
+* portrait:세로 화면
 
